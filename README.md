@@ -1,48 +1,6 @@
-[✔]: assets/images/checkbox-small-blue.png
+
 
 # Node.js Best Practices
-
-<h1 align="center">
-  <img src="assets/images/banner-2.jpg" alt="Node.js Best Practices">
-</h1>
-
-<br/>
-
-<div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2083%20Best%20Practices-blue.svg" alt="83 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%2013%202019-green.svg" alt="Last update: May 13, 2019"> <img src="https://img.shields.io/badge/ %E2%9C%94%20Updated%20For%20Version%20-%20Node%2012.0.0%20LTS-brightgreen.svg" alt="Updated for Node 12.0.0 LTS">
-</div>
-
-<br/>
-
-[![nodepractices](/assets/images/twitter-s.png)](https://twitter.com/nodepractices/) **Follow us on Twitter!** [**@nodepractices**](https://twitter.com/nodepractices/)
-
-<br/>
-
-Read in a different language: [![CN](/assets/flags/CN.png)**CN**](/README.chinese.md), [![BR](/assets/flags/BR.png)**BR**](/README.brazilian-portuguese.md) [(![ES](/assets/flags/ES.png)**ES**, ![FR](/assets/flags/FR.png)**FR**, ![HE](/assets/flags/HE.png)**HE**, ![KR](/assets/flags/KR.png)**KR**, ![RU](/assets/flags/RU.png)**RU** and ![TR](/assets/flags/TR.png)**TR** in progress!)](#translations)
-
-<br/>
-
-###### Built and maintained by our [Steering Committee](#steering-committee) and [Collaborators](#collaborators)
-
-# Latest Best Practices and News
-
-- **New best practice:** 4.4: [Avoid test-fixtures, add data per test](https://github.com/i0natan/nodebestpractices#4-testing-and-overall-quality-practices)
-
-- **New best practice:** 6.25: [Avoid publishing secrets to the npm registry](/sections/security/avoid_publishing_secrets.md)
-
-- **New translation:** ![BR](/assets/flags/BR.png) [Brazilian Portuguese](/README.brazilian-portuguese.md) available now, courtesy of [Marcelo Melo](https://github.com/marcelosdm)! ❤️
-
-<br/><br/>
-
-# Welcome! 3 Things You Ought To Know First:
-
-**1. You are, in fact, reading dozens of the best Node.js articles -** this repository is a summary and curation of the top-ranked content on Node.js best practices, as well as content written here by collaborators
-
-**2. It is the largest compilation, and it is growing every week -** currently, more than 80 best practices, style guides, and architectural tips are presented. New issues and pull requests are created every day to keep this live book updated. We'd love to see you contributing here, whether that is fixing code mistakes, helping with translations, or suggesting brilliant new ideas. See our [writing guidelines here](/.operations/writing-guidelines.md)
-
-**3. Most best practices have additional info -** most bullets include a **🔗Read More** link that expands on the practice with code examples, quotes from selected blogs and more information
-
-<br/><br/>
 
 ## Table of Contents
 
@@ -54,21 +12,12 @@ Read in a different language: [![CN](/assets/flags/CN.png)**CN**](/README.chines
 6.  [Security Practices (25)](#6-security-best-practices)
 7.  [Performance Practices (1) (In Progress️ ✍️)](#7-performance-best-practices)
 
-<br/><br/>
 
 # `1. Project Structure Practices`
 
-## ![✔] 1.1 Structure your solution by components
 
-**TL;DR:** The worst large applications pitfall is maintaining a huge code base with hundreds of dependencies - such a monolith slows down developers as they try to incorporate new features. Instead, partition your code into components, each gets its own folder or a dedicated codebase, and ensure that each unit is kept small and simple. Visit 'Read More' below to see examples of correct project structure
 
-**Otherwise:** When developers who code new features struggle to realize the impact of their change and fear to break other dependent components - deployments become slower and riskier. It's also considered harder to scale-out when all the business units are not separated
-
-🔗 [**Read More: structure by components**](/sections/projectstructre/breakintcomponents.md)
-
-<br/><br/>
-
-## ![✔] 1.2 Layer your components, keep Express within its boundaries
+## ![✔] 1.1 Layer your components, keep Express within its boundaries
 
 **TL;DR:** Each component should contain 'layers' - a dedicated object for the web, logic, and data access code. This not only draws a clean separation of concerns but also significantly eases mocking and testing the system. Though this is a very common pattern, API developers tend to mix layers by passing the web layer objects (Express req, res) to business logic and data layers - this makes your application dependent on and accessible by Express only
 
